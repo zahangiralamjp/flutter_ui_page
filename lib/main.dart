@@ -30,7 +30,7 @@ class FluterUI extends StatelessWidget {
                   width: 500,
                   height: 600,
                   color: Colors.amber,
-/////////// Positioned Stack Container BorderRadius //////////////////////////////
+/////////// Positioned Stack Container BorderRadius.circular //////////////////////////////
                   child: Stack(
                     children: [
                       Positioned(
@@ -45,13 +45,24 @@ class FluterUI extends StatelessWidget {
                             ),
                           )),
                       Positioned(
+                          right: 150,
+                          top: 20,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          )),
+                      Positioned(
                           right: 50,
                           top: 200,
                           child: Container(
                             width: 100,
                             height: 100,
                             decoration: BoxDecoration(
-                              color: Colors.brown,
+                              color: Colors.cyan,
                               borderRadius: BorderRadius.circular(50),
                             ),
                           )),
@@ -62,7 +73,18 @@ class FluterUI extends StatelessWidget {
                             width: 100,
                             height: 100,
                             decoration: BoxDecoration(
-                              color: Colors.brown,
+                              color: Colors.red,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
+                          )),
+                      Positioned(
+                          left: 50,
+                          top: 210,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            decoration: BoxDecoration(
+                              color: Colors.redAccent,
                               borderRadius: BorderRadius.circular(50),
                             ),
                           )),
