@@ -3,84 +3,68 @@ import 'package:flutter/material.dart';
 void main(List<String> args) {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.amber),
-    title: 'Log In Page',
-    home: LogInPage(),
+    theme: ThemeData(primarySwatch: Colors.red),
+    title: 'Flutter UI',
+    home: FluterUI(),
   ));
 }
 
-class LogInPage extends StatefulWidget {
-  const LogInPage({Key? key}) : super(key: key);
+class FluterUI extends StatelessWidget {
+  const FluterUI({Key? key}) : super(key: key);
 
-  @override
-  _LogInPageState createState() => _LogInPageState();
-}
-
-class _LogInPageState extends State<LogInPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Log In'),
+        title: Text(' - Stack UI - '),
+        centerTitle: true,
       ),
       body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Column(
+          child: SingleChildScrollView(
+        child: Column(
+          children: [
+            // Container(),
+            Stack(
               children: [
-                Text(
-                  'Log In',
-                  style: TextStyle(fontSize: 30),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'User Name',
-                    hintText: 'Enter Name',
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    labelText: 'User Name',
-                    hintText: 'Enter Name',
-                  ),
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-              
-                MaterialButton(
-                  minWidth: double.infinity,
-                  height: 60,
-                  color: Colors.black,
-                  splashColor: Colors.white,
-                  onPressed: () {},
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(
-                      color: Colors.black,
-                    ),
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  child: Text(
-                    'Click Here',
-                    style: TextStyle(color: Colors.white, fontSize: 30),
+                Container(
+                  width: 500,
+                  height: 600,
+                  color: Colors.amber,
+/////////// Positioned Stack //////////////////////////////
+                  child: Stack(
+                    children: [
+                      Positioned(
+                          left: 50,
+                          top: 30,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.brown,
+                          )),
+                      Positioned(
+                          right: 50,
+                          top: 200,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.brown,
+                          )),
+                      Positioned(
+                          right: 200,
+                          bottom: 50,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.brown,
+                          )),
+                    ],
                   ),
                 ),
               ],
             ),
-          ),
+          ],
         ),
-      ),
+      )),
     );
   }
 }
