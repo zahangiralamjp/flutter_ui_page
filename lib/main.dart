@@ -30,7 +30,7 @@ class FluterUI extends StatelessWidget {
                   width: 500,
                   height: 600,
                   color: Colors.amber,
-/////////// Positioned Stack //////////////////////////////
+/////////// Positioned Stack Container BorderRadius //////////////////////////////
                   child: Stack(
                     children: [
                       Positioned(
@@ -39,7 +39,10 @@ class FluterUI extends StatelessWidget {
                           child: Container(
                             width: 100,
                             height: 100,
-                            color: Colors.brown,
+                            decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
                           )),
                       Positioned(
                           right: 50,
@@ -47,7 +50,10 @@ class FluterUI extends StatelessWidget {
                           child: Container(
                             width: 100,
                             height: 100,
-                            color: Colors.brown,
+                            decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
                           )),
                       Positioned(
                           right: 200,
@@ -55,7 +61,10 @@ class FluterUI extends StatelessWidget {
                           child: Container(
                             width: 100,
                             height: 100,
-                            color: Colors.brown,
+                            decoration: BoxDecoration(
+                              color: Colors.brown,
+                              borderRadius: BorderRadius.circular(50),
+                            ),
                           )),
                     ],
                   ),
