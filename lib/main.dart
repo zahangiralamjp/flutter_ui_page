@@ -9,9 +9,8 @@ void main(List<String> args) {
   ));
 }
 
+//////////// Container WITH Transform /////////////////////////
 class FluterUI extends StatelessWidget {
-  const FluterUI({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,36 +19,109 @@ class FluterUI extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-          child: SingleChildScrollView(
+        // child: Transform.rotate(
+        //   angle: 1,
+        //   child: Container(
+        //     width: 100,
+        //     height: 100,
+        //     color: Colors.amber,
+        //   ),
+        // ),
         child: Column(
           children: [
-            // Container(),
-            Stack(
-              children: [
-                Container(
-                  width: 500,
-                  height: 600,
-                  color: Colors.amber,
-/////////// BorderRadius Radius.circular //////////////////////////////
-                  child: Stack(
-                    children: [
-                      Container(
-                        height: 200,
-                        decoration: BoxDecoration(
-                          color: Colors.black,
-                          borderRadius: BorderRadius.only(
-                            bottomRight: Radius.circular(200),
-                          ),
+            Container(
+              width: 500,
+              height: 500,
+              color: Colors.amber,
+              child: Stack(
+                children: [
+                  Positioned(
+                      left: 30,
+                      top: 30,
+                      child: Transform.rotate(
+                        angle: 1,
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          color: Colors.white,
                         ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+                      )),
+                  Positioned(
+                      top: 260,
+                      left: 150,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 50,
+                            height: 50,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      bottom: 50,
+                      right: 130,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 120,
+                            height: 200,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      top: 150,
+                      right: 130,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 90,
+                            height: 90,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      bottom: 30,
+                      left: 130,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 90,
+                            height: 90,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      top: 40,
+                      right: 50,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 90,
+                            height: 90,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      top: 40,
+                      right: 190,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 50,
+                            height: 60,
+                            color: Colors.white,
+                          ))),
+                  Positioned(
+                      top: 200,
+                      left: 50,
+                      child: Transform.rotate(
+                          angle: 2,
+                          child: Container(
+                            width: 100,
+                            height: 100,
+                            color: Colors.white,
+                          ))),
+                ],
+              ),
             ),
           ],
         ),
-      )),
+      ),
     );
   }
 }
