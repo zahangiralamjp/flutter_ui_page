@@ -1,4 +1,4 @@
-# adding_firebase_to_our_e_commerce
+# flutter_application_1
 
 A new Flutter project.
 
